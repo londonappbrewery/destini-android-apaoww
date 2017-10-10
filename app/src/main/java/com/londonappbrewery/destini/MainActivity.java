@@ -33,6 +33,26 @@ public class MainActivity extends AppCompatActivity {
         } else {
             mStoryIndex = 1;
         }
+        // Resume state condition
+        if (mStoryIndex == 1 || mStoryIndex == 2) {
+            mTextViewStory.setText(getString(R.string.T3_Story));
+            mButtonTop.setText(getString(R.string.T3_Ans1));
+            mButtonBottom.setText(getString(R.string.T3_Ans2));
+            //mStoryIndex = 3;
+        } else if (mStoryIndex == 3) {
+            mTextViewStory.setText(getString(R.string.T6_End));
+            mButtonTop.setVisibility(View.GONE);
+            mButtonBottom.setVisibility(View.GONE);
+            //mStoryIndex = 6;
+        } else if(mStoryIndex == 5) {
+            mTextViewStory.setText(getString(R.string.T5_End));
+            mButtonTop.setVisibility(View.GONE);
+            mButtonBottom.setVisibility(View.GONE);
+        } else if(mStoryIndex == 6) {
+            mTextViewStory.setText(getString(R.string.T6_End));
+            mButtonTop.setVisibility(View.GONE);
+            mButtonBottom.setVisibility(View.GONE);
+        }
 
 
         // TODO: Steps 6, 7, & 9 - Set a listener on the top button:
